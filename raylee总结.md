@@ -3599,10 +3599,6 @@ int arr[100] = {0}     int  arr[100];       sizeof(arr) = 100*4
 
 
 
-
-
-
-
 linux 文件权限
 
 
