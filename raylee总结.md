@@ -3626,3 +3626,76 @@ x:可执行      1
 
 
 文件权限为   754
+
+
+
+
+
+**C和C++的struct的区别**
+
+C++支持成员函数的定义   C只能是一些变量的集合体
+
+C中的struct是没有权限设置的，C++增加了访问权限和class 一样
+
+
+
+**memset 可以用来初始化类对象吗？**
+
+memset 在对结构体变量赋值时使用。struct A a;  memset(&a,0,sizeof(a));
+
+不可以。类对象初始化通过构造函数完成，为什么要使用memset? 如果类包含虚函数，则不能用 memset 来初始化类对象。每个包含虚函数的类对象都有一个指针指向虚函数表,该指针是被隐藏的,这个指针也是不可存取的,当进行memset操作时，这个指针的值也要被重写，只要一调用虚函数，程序便崩溃。不知道怎调用哪个函数了。
+
+
+
+**加密算法 ** 
+
+分为对称性加密算法和非对称性加密算法
+
+**对称加密**（加解密相同的密匙） AES、DES、3DES
+
+![image-20200924190618326](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924190618326.png)
+
+**AES**使用128位分组块的分组加密算法，分组块和128、192或256位的密钥一起作为输入，对4×4的字节数组上进行操作
+
+**DES**以64位为分组对数据加密，它的密钥长度是56位，加密解密用同一算法
+
+
+
+
+
+**非对称加密 **      RSA、DSA、ECC
+
+公开密钥加密算法（公匙和私匙） 
+
+![image-20200924191014098](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924191014098.png)
+
+![image-20200924191730599](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924191730599.png)
+
+
+
+**RSA**两个大质数（素数）相乘十分容易，但是想要对其乘积进行因式分解却极其困难，因此可以将乘积公开作为加密密钥
+
+
+
+**散列算法**
+
+**MD5、SHA1、HMAC**
+
+生成一串不可逆的密文
+
+![image-20200924193226921](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924193226921.png)
+
+![image-20200924193427101](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924193427101.png)
+
+
+
+**https 加密过程**
+
+![image-20200924194416511](https://gitee.com/raylee-lilei/cdn/raw/master/image-20200924194416511.png)
+
+5和7的步骤是对称加密
+
+
+
+
+
