@@ -3549,7 +3549,7 @@ unsigned char* Test(void){
 }
 ```
 
-char 函数原型
+strcpy函数原型
  char* strcpy( char _Dest, char const* _Str)
 
 
